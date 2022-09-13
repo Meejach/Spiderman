@@ -14,6 +14,9 @@ public class Database {
         */
     }
 
+    public ArrayList<Superhero> getSuperHeroes() {
+        return superHeroes;
+    }
 
     @Override
     public String toString() {

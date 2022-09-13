@@ -23,6 +23,26 @@ public class Superhero {
         // Constructor der ikke tager i mode superhero name.
     }
 
+    public String getSuperheroName() {
+        return superheroName;
+    }
+
+    public String getSuperpower() {
+        return superpower;
+    }
+
+    public int getCreationYear() {
+        return creationYear;
+    }
+
+    public String getRealName() {
+        return realName;
+    }
+
+    public String getStrength() {
+        return strength;
+    }
+
     @Override
     public String toString() {
         return "Superhero{" +
