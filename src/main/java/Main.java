@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -13,27 +12,22 @@ public class Main {
         String newLine = "\n";
         String menuChoiceOne = "1. Create superhero ";
         String menuChoiceTwo = "2. Show superheroes ";
+        String menuChoiceThree = "3. Search for superhero ";
         String menuChoiceNine = "9. Exit.";
-        String superheroNameText = "Superhero name: ";
-        String superPowerText = "Super power: ";
-        String realNameText = "Your real name: ";
-        String creationYearText = "Creation year: ";
-        String strengthText = "Strength: ";
+
 
         Scanner input = new Scanner(System.in); // Laver en scanner fordi vi skal have input fra brugeren!
         Database database = new Database(); // Opretter data objektet som indeholder superhelte.
 
         while(true) {
 
-            System.out.println(welcome + newLine + menuChoiceOne + newLine + menuChoiceTwo + newLine + menuChoiceNine);
+            System.out.println(welcome + newLine + menuChoiceOne + newLine + menuChoiceTwo + newLine + menuChoiceThree + newLine + menuChoiceNine);
 
             int menuChoice = input.nextInt();
             input.nextLine();
 
             if (menuChoice == 1)
             {
-
-
 
                 System.out.println(" What is your superhero name? "); // Udskriver tekst til bruger
                 superheroName = input.nextLine(); // Tager i mod brugernes indput
@@ -60,15 +54,39 @@ public class Main {
                 builder.append("List of superheroes ");
 
                 for (Superhero superhero : database.getSuperHeroes() ) {
-                    builder.append(superheroNameText + superhero.getSuperheroName() + newLine);
-                    builder.append(superPowerText + superhero.getSuperpower() + newLine);
-                    builder.append(realNameText + superhero.getRealName() + newLine);
-                    builder.append(creationYearText + superhero.getCreationYear() + newLine);
-                    builder.append(strengthText + superhero.getStrength() + newLine);
+                    builder.append(database.getSuperheroNameText() + superhero.getSuperheroName() + newLine);
+                    builder.append(database.getSuperPowerText() + superhero.getSuperpower() + newLine);
+                    builder.append(database.getRealNameText() + superhero.getRealName() + newLine);
+                    builder.append(database.getCreationYearText() + superhero.getCreationYear() + newLine);
+                    builder.append(database.getStrengthText() + superhero.getStrength() + newLine);
                     builder.append(newLine);
                 }
                 System.out.println(builder.toString());
 
+            }
+
+            if (menuChoice == 3) {
+                boolean superheroFound = false;
+                while (superheroFound == false) {
+                    System.out.println("A. Search by superhero name." + newLine + "B. Search by real name." + newLine + "Return. Return to main menu");
+                    String choice = input.nextLine();
+                    String searchCriteria = "";
+                    if(choice.equalsIgnoreCase("return")) {
+                        superheroFound = true;
+                    } else {
+                        System.out.println("Please enter search criteria: ");
+                        searchCriteria = input.nextLine();
+                    }
+
+                    if (choice.equalsIgnoreCase("A")) {
+                        superheroFound = database.getSuperheroDetailsBySuperHeroName(searchCriteria, newLine);
+                    }
+
+                    if (choice.equalsIgnoreCase("B")) {
+                        superheroFound = database.getSuperheroDetailsByRealName(searchCriteria, newLine);
+                    }
+
+                }
             }
 
             if (menuChoice == 9) {
