@@ -22,11 +22,12 @@ public class Main {
         while(true) {
 
             System.out.println(welcome + newLine + menuChoiceOne + newLine + menuChoiceTwo + newLine + menuChoiceThree + newLine + menuChoiceNine);
+            // Udksrivning tekst til brugeren når man tilgår hovedemenuen.
 
-            int menuChoice = input.nextInt();
-            input.nextLine();
+            int menuChoice = input.nextInt(); // Brugere skal vælge et tal fra menuChoice
+            input.nextLine(); // nextline ellers går nextInt ikke videre til næste linje.
 
-            if (menuChoice == 1)
+            if (menuChoice == 1) // Hvis menuChoice er 1 sker dette.
             {
 
                 System.out.println(" What is your superhero name? "); // Udskriver tekst til bruger
@@ -53,43 +54,46 @@ public class Main {
 
                 builder.append("List of superheroes ");
 
-                for (Superhero superhero : database.getSuperHeroes() ) {
-                    builder.append(database.getSuperheroNameText() + superhero.getSuperheroName() + newLine);
-                    builder.append(database.getSuperPowerText() + superhero.getSuperpower() + newLine);
-                    builder.append(database.getRealNameText() + superhero.getRealName() + newLine);
-                    builder.append(database.getCreationYearText() + superhero.getCreationYear() + newLine);
-                    builder.append(database.getStrengthText() + superhero.getStrength() + newLine);
-                    builder.append(newLine);
+                for (Superhero superhero : database.getSuperHeroes() ) { // For hver superhero i superheroes
+                    builder.append(database.getSuperheroNameText() + superhero.getSuperheroName() + newLine); // Builder der tilføler superhero navn tekst og superheltenavn + new line.
+                    builder.append(database.getSuperPowerText() + superhero.getSuperpower() + newLine); // Builder der tilføjer superpower tekst og hvilken superkræft + new line.
+                    builder.append(database.getRealNameText() + superhero.getRealName() + newLine); // Builder der tilføjer det rigtige navn nekst og avnet + new line.
+                    builder.append(database.getCreationYearText() + superhero.getCreationYear() + newLine); // Builder der tilføjer hvilket år de er skabt tekst og året + new line.
+                    builder.append(database.getStrengthText() + superhero.getStrength() + newLine); // Builder der tilføjer skyrke tekst og styrken + new line.
+                    builder.append(newLine); // Builder der tilføjer new line.
                 }
-                System.out.println(builder.toString());
+                System.out.println(builder); // Udskriver al teksten til superhero.
 
             }
 
-            if (menuChoice == 3) {
-                boolean superheroFound = false;
-                while (superheroFound == false) {
+            if (menuChoice == 3) { // Hvis brugeren vælger 3 sker dette.
+                boolean superheroFound = false; // Opretter superheroFound = falsk.
+                while (superheroFound == false) { // Imens superheroFound = falsk, sker dette.
                     System.out.println("A. Search by superhero name." + newLine + "B. Search by real name." + newLine + "Return. Return to main menu");
-                    String choice = input.nextLine();
-                    String searchCriteria = "";
-                    if(choice.equalsIgnoreCase("return")) {
-                        superheroFound = true;
-                    } else {
-                        System.out.println("Please enter search criteria: ");
-                        searchCriteria = input.nextLine();
+                    // Udskriver A, B, eller return mulighederne.
+                    String choice = input.nextLine(); // Brugere skal vælge et tal fra menuChoice.
+                    String searchCriteria = ""; // Opretter searchCriteria.
+                    if(choice.equalsIgnoreCase("return")) { // Hvis valg er = return hvor vi ignorere teksten om det er med stort eller småt.
+                        superheroFound = true; // setter superheroFound = true. Så stopper loopet.
+                    } else { // Ellers sker dette
+                        System.out.println("Please enter search criteria: "); // Udskriver teksten til brugrern = Plz enter search criteria.
+                        searchCriteria = input.nextLine(); // searchCriteria = Bruger skriver noget.
                     }
 
-                    if (choice.equalsIgnoreCase("A")) {
+                    if (choice.equalsIgnoreCase("A")) { // Hvis valg er = A
                         superheroFound = database.getSuperheroDetailsBySuperHeroName(searchCriteria, newLine);
+                        // superheroFound = vi tilgår databasen med getSuperheroDetailsBtSuperHeroName metoden. Som sender to Strings med ind i metoden.
                     }
 
-                    if (choice.equalsIgnoreCase("B")) {
+                    if (choice.equalsIgnoreCase("B")) { // Hvis val er = B
                         superheroFound = database.getSuperheroDetailsByRealName(searchCriteria, newLine);
+                        // superheroFound = vi tilgår databasen med getSuperheroDetailsByRealName metoden. Som dender to Strings med ind i metoden.
                     }
 
                 }
             }
 
-            if (menuChoice == 9) {
+            if (menuChoice == 9) { // Hvis menuChoice er = 9 så exiter vi.
                 System.exit(4);
             }
         }

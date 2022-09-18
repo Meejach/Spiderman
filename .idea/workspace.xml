@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9abb2175-9413-4705-8730-366724e052d2" name="Changes" comment="Spiderman blev til">
-      <change afterPath="$PROJECT_DIR$/docs/Superhero diagram.drawio" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Superhero diagram.drawio.png" afterDir="false" />
+    <list default="true" id="9abb2175-9413-4705-8730-366724e052d2" name="Changes" comment="User story 5 og diagram tilføjet.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
@@ -25,9 +23,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="4d6e5e24-6df9-4f43-a3f9-db4dd25677e2" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -90,7 +85,8 @@
       <workItem from="1663148455424" duration="30000" />
       <workItem from="1663148489125" duration="6375000" />
       <workItem from="1663229844900" duration="805000" />
-      <workItem from="1663231525891" duration="1568000" />
+      <workItem from="1663231525891" duration="1798000" />
+      <workItem from="1663517009785" duration="3948000" />
     </task>
     <task id="LOCAL-00001" summary="Spiderman blev til.">
       <created>1663008031291</created>
@@ -106,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663008171524</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="User story 5 og diagram tilføjet.">
+      <created>1663233196671</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1663233196671</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +129,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Spiderman blev til." />
     <MESSAGE value="Spiderman blev til" />
-    <option name="LAST_COMMIT_MESSAGE" value="Spiderman blev til" />
+    <MESSAGE value="User story 5 og diagram tilføjet." />
+    <option name="LAST_COMMIT_MESSAGE" value="User story 5 og diagram tilføjet." />
   </component>
 </project>
