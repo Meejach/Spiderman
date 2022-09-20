@@ -65,6 +65,20 @@ public class Database {
     }
 
 
+    public Superhero getSuperheroByRealName(String searchCriteria) { // Det er en public metode der retunere en superhero. Som tager imod 1 string.
+
+        for (Superhero superhero : superHeroes ) { // For hver superhero i superheroes
+            if (superhero.getRealName().contains(searchCriteria) == true) { // Hvis det sande navn indeholder searchCriteria = true.
+                return superhero; // hvis superhelten findes så retunere vi superhero.
+            } else { // Hvis vi ikke opfylder searchCriteria
+                String sryText = " Superhero does not exist, plz try again. ";
+                return null; // Hvis superhelten ikke findes retunere vi null.
+            }
+        }
+        return null; // Hvis ingen superhelte eksistere. Kommer vi aldrig ind i foor loopet
+    }
+
+
 
     public ArrayList<Superhero> getSuperHeroes() {
         return superHeroes;

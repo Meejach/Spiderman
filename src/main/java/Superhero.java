@@ -54,4 +54,24 @@ public class Superhero {
                 '}';
         // ToString metode der returnere atributternes værdier i en string.
     }
+
+    public void setSuperheroName(String superheroName) {
+        this.superheroName = superheroName;
+    }
+
+    public void setSuperpower(String superpower) {
+        this.superpower = superpower;
+    }
+
+    public void setCreationYear(int creationYear) {
+        this.creationYear = creationYear;
+    }
+
+    public void setRealName(String realName) {
+        this.realName = realName;
+    }
+
+    public void setStrength(String strength) {
+        this.strength = strength;
+    }
 }
