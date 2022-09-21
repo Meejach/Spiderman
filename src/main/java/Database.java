@@ -10,18 +10,23 @@ public class Database {
     private ArrayList<Superhero> superHeroes = new ArrayList();
     /** Vi opretter en array liste i sted for et array så vi ikke behøver ændre størrelse
      * Array listen indeholder superhero (objekter)
-    */
+     */
     public void createSuperhero(String superheroName, String superpower, int creationYear, String realName, String strength) {
-       superHeroes.add(new Superhero(superheroName, superpower, creationYear, realName, strength));
-       /** Denne metode tilføjer vi new superhero og vi kalder new
-        * så vi kan oprette uden at tilføje det til en variable altså uden
-        * eksempel: Superhero superhero = new Superhero();
-        */
+        superHeroes.add(new Superhero(superheroName, superpower, creationYear, realName, strength));
+        /** Denne metode tilføjer vi new superhero og vi kalder new
+         * så vi kan oprette uden at tilføje det til en variable altså uden
+         * eksempel: Superhero superhero = new Superhero();
+         */
+    }
+
+    public void deleteSuperhero(int index) {
+        System.out.println("Deleting " + superHeroes.get(index).getSuperheroName() + " from the database");
+        superHeroes.remove(index);
     }
 
     public boolean getSuperheroDetailsBySuperHeroName(String searchCriteria, String newLine) { // Det er en public metode der retunere en boolean. Som tager imod 2 strings.
         StringBuilder builder = new StringBuilder(); // Vi opretter en string builder.
-        for (Superhero superhero : superHeroes ) { // For hver superhero i superheroes
+        for (Superhero superhero : superHeroes) { // For hver superhero i superheroes
             if (superhero.getSuperheroName().contains(searchCriteria) == true) { // Hvis superheronavn indeholder searchCriteria = true.
                 builder.append(superheroNameText + superhero.getSuperheroName() + newLine); // Builder der tilføler superhero navn tekst og superheltenavn + new line.
                 builder.append(superPowerText + superhero.getSuperpower() + newLine); // Builder der tilføjer superpower tekst og hvilken superkræft + new line.
@@ -71,7 +76,8 @@ public class Database {
             if (superhero.getRealName().contains(searchCriteria) == true) { // Hvis det sande navn indeholder searchCriteria = true.
                 return superhero; // hvis superhelten findes så retunere vi superhero.
             } else { // Hvis vi ikke opfylder searchCriteria
-                String sryText = " Superhero does not exist, plz try again. ";
+                String sryText = " Superhero does not exist, plz try again.";
+                System.out.println(sryText);
                 return null; // Hvis superhelten ikke findes retunere vi null.
             }
         }

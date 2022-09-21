@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9abb2175-9413-4705-8730-366724e052d2" name="Changes" comment="User story 5 og diagram tilføjet.">
+    <list default="true" id="9abb2175-9413-4705-8730-366724e052d2" name="Changes" comment="User story 5 og diagram tilføjet. &#10;+ Alle kommentar til også">
+      <change afterPath="$PROJECT_DIR$/src/test/DatabaseTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
@@ -48,15 +50,19 @@
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Dea Kamper\Spiderman\src" />
       <recent name="C:\Users\Dea Kamper\Spiderman\docs" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Superhelte" />
@@ -64,9 +70,52 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DatabaseTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Superhelte" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DatabaseTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DatabaseTests.createManySuperheroestest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Superhelte" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DatabaseTests" />
+      <option name="METHOD_NAME" value="createManySuperheroestest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DatabaseTests.createOneSuperheroTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Superhelte" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DatabaseTests" />
+      <option name="METHOD_NAME" value="createOneSuperheroTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DatabaseTests.deleteSuperheroTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Superhelte" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DatabaseTests" />
+      <option name="METHOD_NAME" value="deleteSuperheroTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.DatabaseTests.deleteSuperheroTest" />
+        <item itemvalue="JUnit.DatabaseTests.createManySuperheroestest" />
+        <item itemvalue="JUnit.DatabaseTests.createOneSuperheroTest" />
+        <item itemvalue="JUnit.DatabaseTests" />
       </list>
     </recent_temporary>
   </component>
@@ -86,7 +135,12 @@
       <workItem from="1663148489125" duration="6375000" />
       <workItem from="1663229844900" duration="805000" />
       <workItem from="1663231525891" duration="1798000" />
-      <workItem from="1663517009785" duration="3948000" />
+      <workItem from="1663517009785" duration="4001000" />
+      <workItem from="1663683205789" duration="7642000" />
+      <workItem from="1663749872992" duration="737000" />
+      <workItem from="1663750926286" duration="1809000" />
+      <workItem from="1663767797985" duration="1264000" />
+      <workItem from="1663769078902" duration="5541000" />
     </task>
     <task id="LOCAL-00001" summary="Spiderman blev til.">
       <created>1663008031291</created>
@@ -109,7 +163,21 @@
       <option name="project" value="LOCAL" />
       <updated>1663233196671</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="User story 5 og diagram tilføjet. &#10;+ Alle kommentar til også">
+      <created>1663520995836</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1663520995836</updated>
+    </task>
+    <task id="LOCAL-00005" summary="User story 6 + 7 UDEN KOMMENTAR!">
+      <created>1663690805161</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1663690805161</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +198,8 @@
     <MESSAGE value="Spiderman blev til." />
     <MESSAGE value="Spiderman blev til" />
     <MESSAGE value="User story 5 og diagram tilføjet." />
-    <option name="LAST_COMMIT_MESSAGE" value="User story 5 og diagram tilføjet." />
+    <MESSAGE value="User story 5 og diagram tilføjet. &#10;+ Alle kommentar til også" />
+    <MESSAGE value="User story 6 + 7 UDEN KOMMENTAR!" />
+    <option name="LAST_COMMIT_MESSAGE" value="User story 6 + 7 UDEN KOMMENTAR!" />
   </component>
 </project>

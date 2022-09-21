@@ -15,6 +15,7 @@ public class Main {
         String menuChoiceTwo = "2. Show superheroes ";
         String menuChoiceThree = "3. Search for superhero ";
         String menuChoiceFour = "4. Edit superhero";
+        String menuChoiceFive = "5. Delete";
         String menuChoiceNine = "9. Exit.";
 
 
@@ -23,14 +24,15 @@ public class Main {
 
         while (true) {
 
-            System.out.println(welcome + newLine + menuChoiceOne + newLine + menuChoiceTwo + newLine + menuChoiceThree + newLine + menuChoiceFour + newLine + menuChoiceNine);
+            String menuIntroductionText = welcome + newLine + menuChoiceOne + newLine + menuChoiceTwo + newLine + menuChoiceThree + newLine + menuChoiceFour + newLine + menuChoiceFive + newLine + menuChoiceNine;
+            System.out.println(menuIntroductionText);
             // Udksrivning tekst til brugeren når man tilgår hovedemenuen.
             int menuChoice = 0;
             try {
                 menuChoice = input.nextInt(); // Brugere skal vælge et tal fra menuChoice
             } catch (InputMismatchException ime) {
                 input.nextLine();
-                System.out.println(welcome + newLine + menuChoiceOne + newLine + menuChoiceTwo + newLine + menuChoiceThree + newLine + menuChoiceFour + newLine + menuChoiceNine);
+                System.out.println(menuIntroductionText);
                 menuChoice = input.nextInt();
             }
 
@@ -174,15 +176,29 @@ public class Main {
                         superheroByRealName.setCreationYear(input.nextInt());
                     }
                 }
-                if (choice.equalsIgnoreCase("E")) {
-                    System.out.println("Plz choose new value");
-                    superheroByRealName.setStrength(input.nextLine());
-                }
-                System.out.println(database.getSuperheroDetailsBySuperHeroName(superheroByRealName.getSuperheroName(), newLine));
-                }
-                else {
+                    if (choice.equalsIgnoreCase("E")) {
+                        System.out.println("Plz choose new value");
+                        superheroByRealName.setStrength(input.nextLine());
+                    }
+                    System.out.println(database.getSuperheroDetailsBySuperHeroName(superheroByRealName.getSuperheroName(), newLine));
+                } else {
                     System.out.println("Sorry your superhero does not exist, plz try again");
                 }
+            }
+
+            if (menuChoice == 5) {
+                int index = -1;
+                try {
+                    System.out.println("Plz choose an index");
+                    index = input.nextInt();
+                    input.nextLine();
+                } catch (InputMismatchException ime) {
+                    input.nextLine();
+                    System.out.println("Plz choose an index");
+                    index = input.nextInt();
+                    input.nextLine();
+                }
+                database.deleteSuperhero(index);
             }
             if (menuChoice == 9) { // Hvis menuChoice er = 9 så exiter vi.
                 System.exit(4);
